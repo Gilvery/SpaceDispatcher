@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+        <title>SpaceDispatcher</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="scanlines"></div>
+    <div class="crt-effect"></div>
+    
+    <div class="terminal-container">
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="status-led green"></span>
+                СВЯЗЬ: УСТАНОВЛЕНА
+            </div>
+            <div class="status-item">
+                <span class="status-led yellow"></span>
+                БОРТ: СТАБИЛЬНО
+            </div>
+            <div class="status-item">
+                <span class="status-led red"></span>
+                ТРЕВОГА: НЕТ
+            </div>
+            <div class="status-item right">
+                UTC: 2357 / Д+127
+            </div>
+        </div>
+
+        <div class="main-panel">
+            <div class="character-panel">
+                <div class="character-frame">
+                    <img src="images/character.png" alt="character" class="character-img">
+                </div>
+                <div class="character-status">
+                    <div class="vital-sign">
+                        <span>♡ ПУЛЬС: 68</span>
+                        <span>⏥ ДЫХАНИЕ: 14</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-panel">
+                <div class="chat-header">
+                    <span class="blink">▶</span> КОММУНИКАТОР: КАПИТАН СУДНА R-33KIT
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message system">
+                        <span class="timestamp">[23:57:12]</span>
+                        <span class="sender">СИСТЕМА:</span>
+                        <span class="text">Канал связи открыт. Говорите.</span>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <span class="prompt">></span>
+                    <input type="text" id="messageInput" placeholder="Введите сообщение..." autofocus>
+                    <button id="sendButton">ПЕРЕДАТЬ</button>
+                </div>
+
+                <div class="hint">
+                    [ПОДСКАЗКА: попробуйте слова: помощь, атака, топливо, экипаж, повреждение]
+                </div>
+            </div>
+        </div>
+
+        <div class="log-panel">
+            <div class="log-header">
+                СИСТЕМНЫЙ ЖУРНАЛ v.2.3.1
+            </div>
+            <div class="log-content" id="logContent">
+                [СИСТЕМА] Инициализация коммуникатора...
+                [СИСТЕМА] Загрузка базы ответов...
+                [СИСТЕМА] Готов к приему сообщений.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
