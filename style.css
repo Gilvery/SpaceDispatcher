@@ -1,19 +1,19 @@
    :root {
   
-    --color-primary: #33ff99;        
-    --color-primary-dim: #1a3a1f;    
-    --color-primary-soft: #0f1f14;   
-    --color-primary-dark: #0a1a0f;   
-    --color-primary-deeper: #0a150a; 
-    --color-primary-black: #030504;  
- 
-    --color-success: #00ff88;
-    --color-warning: #ffff00;
-    --color-error: #ff3333;
-    --color-text-dim: #669966;
-    --color-text-soft: #88aa88;
-    --color-text-bright: #ffff99;
-    --color-glow: rgba(51, 255, 153, 0.2);
+    --color-primary: #ffb3c6;           /* светлый розовый (как ярко-зеленый в оригинале) */
+    --color-primary-dim: #b35f7c;        /* темный розовый (для контраста) */
+    --color-primary-soft: #9a3e5f;       /* очень светлый */
+    --color-primary-dark: #8f4a63;       /* еще темнее */
+    --color-primary-deeper: #6b3748;     /* очень темный */
+    --color-primary-black: #2a1a20;      /* почти черный с розовым */
+    
+    --color-success: #d991b0;            /* средне-розовый */
+    --color-warning: #e6b3cc;            /* светлый розовый */
+    --color-error: #cc809b;              /* темный розовый */
+    --color-text-dim: #ac7f92;           /* приглушенный розовый */
+    --color-text-soft: #d9b3c4;          /* мягкий розовый */
+    --color-text-bright: #ffe6f0;         /* почти белый */
+    --color-glow: rgba(255, 179, 198, 0.2);
  
     --font-mono: 'Share Tech Mono', 'Courier New', Courier, monospace;
     
@@ -169,7 +169,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    filter: sepia(100%) hue-rotate(90deg) brightness(1.2);
+    filter: contrast(0.9) brightness(3.9) saturate(90%) hue-rotate(300deg);
 }
 
 .character-status {

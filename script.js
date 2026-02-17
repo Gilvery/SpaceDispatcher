@@ -73,25 +73,18 @@ const SECRET_CODES = {
     }
 };
 
-// ============================================
-// ПЕРЕМЕННЫЕ ИГРЫ
-// ============================================
+
 let oxygen = 100;
 let energy = 100;
 let generatorActive = false;
 let gameActive = true;
 let generatorClicks = 0;
 
-// ============================================
-// ФУНКЦИИ ОБНОВЛЕНИЯ РЕСУРСОВ
-
-// ============================================
 function updateAllStats() {
     document.querySelectorAll('.oxygen-value').forEach(el => el.textContent = oxygen);
     document.querySelectorAll('.energy-value').forEach(el => el.textContent = energy);
 }
 
-// Изменение кислорода (прибавить или убавить)
 function changeOxygen(amount, isAdd = false) {
     if (!gameActive) return;
     
