@@ -84,15 +84,11 @@ let generatorClicks = 0;
 
 // ============================================
 // ФУНКЦИИ ОБНОВЛЕНИЯ РЕСУРСОВ
-// ============================================
-function updateOxygen() {
-    const oxygenElem = document.getElementById('oxygenValue');
-    if (oxygenElem) oxygenElem.textContent = oxygen;
-}
 
-function updateEnergy() {
-    const energyElem = document.getElementById('energyValue');
-    if (energyElem) energyElem.textContent = energy;
+// ============================================
+function updateAllStats() {
+    document.querySelectorAll('.oxygen-value').forEach(el => el.textContent = oxygen);
+    document.querySelectorAll('.energy-value').forEach(el => el.textContent = energy);
 }
 
 // Изменение кислорода (прибавить или убавить)
@@ -105,7 +101,7 @@ function changeOxygen(amount, isAdd = false) {
         oxygen = Math.max(0, oxygen - amount);
     }
     
-    updateOxygen();
+    updateAllStats();
     
     if (oxygen <= 0) {
         gameActive = false;
@@ -125,7 +121,7 @@ function changeOxygen(amount, isAdd = false) {
 function decreaseEnergy(amount) {
     if (!gameActive) return;
     energy = Math.max(0, energy - amount);
-    updateEnergy();
+    updateAllStats();
     
     if (energy <= 0) {
         gameActive = false;
@@ -347,8 +343,7 @@ initSystemLogs();
 
 window.addEventListener('load', () => {
     messageInput.focus();
-    updateOxygen();
-    updateEnergy();
+    updateAllStats();
 });
 
 // Мигание LED индикаторов
